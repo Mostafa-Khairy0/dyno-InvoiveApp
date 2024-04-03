@@ -1,14 +1,12 @@
 {
-  "name": "jsonserver",
+  "name": "json-server-example",
   "version": "1.0.0",
-  "description": "",
+  "description": "JSON Server app",
   "main": "index.js",
   "scripts": {
-    "start": "npx json-server data.json"
+    "start": "node index.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "json-server": "^1.0.0-alpha.23"
+    "json-server": "^0.16.3"
   }
 }
