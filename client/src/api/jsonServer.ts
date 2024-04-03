@@ -2,7 +2,7 @@ import axios from "axios";
 import type { Bill } from "../types/bills";
 
 export const jsonServer = axios.create({
-  baseURL: "https://dyno-invoiveapp.onrender.com",
+  baseURL: "https://dyno-invoive-app.vercel.app/data.json",
 });
 
 export const getAllBills = async (): Promise<Bill[]> | never => {
