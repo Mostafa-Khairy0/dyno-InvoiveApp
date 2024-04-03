@@ -2,12 +2,12 @@ import axios from "axios";
 import type { Bill } from "../types/bills";
 
 export const jsonServer = axios.create({
-  baseURL: "https://dyno-invoiveapp.onrender.com",
+  baseURL: "https://dyno-invoive-app.vercel.app/data.json",
 });
 
 export const getAllBills = async (): Promise<Bill[]> | never => {
   try {
-    const res = await jsonServer.get("bills");
+    const res = await jsonServer.get("/");
     return res.data;
   } catch (error) {
     console.error(error);
@@ -17,7 +17,7 @@ export const getAllBills = async (): Promise<Bill[]> | never => {
 
 export const setBill = async (bill: Bill): Promise<void> | never => {
   try {
-    await jsonServer.post(`bills`, bill);
+    await jsonServer.post(`/`, bill);
   } catch (error) {
     console.error(error);
     throw error;
@@ -30,7 +30,7 @@ export const updateBill = async (
 ): Promise<void> | never => {
   try {
     console.log({ bill });
-    await jsonServer.put(`bills/${id}`, bill);
+    await jsonServer.put(`/${id}`, bill);
   } catch (error) {
     console.error(error);
     throw error;
