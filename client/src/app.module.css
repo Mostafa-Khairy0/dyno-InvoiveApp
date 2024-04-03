@@ -1,0 +1,28 @@
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--extremely-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.invoicesContainer {
+  width: 70%;
+  min-width: 320px;
+  max-width: 650px;
+  height: 100vh;
+  padding: 50px 0 0 0;
+}
+.invoices {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.text{
+  font-size: 22px;
+  font-weight: 800;
+}

@@ -1,0 +1,112 @@
+.header {
+  height: 100%;
+  width: 80px;
+  background-color: var(--dark-blue);
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border-radius: 0 25px 25px 0;
+  z-index: 999;
+}
+.logoBox {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: var(--vivid-purple);
+  position: relative;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoBox:after {
+  width: 100%;
+  height: 50%;
+  background-color: var(--light-purple);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  border-radius: 25px 0;
+}
+.logo {
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--extremely-light);
+  z-index: 2;
+  position: relative;
+}
+.logo:after {
+  width: 50%;
+  height: 60%;
+  background-color: var(--vivid-purple);
+  position: absolute;
+  left: 7.5px;
+  top: -10%;
+  content: "";
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+}
+.other {
+  width: 100%;
+  height: calc(100% - 100px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+.modeIcon {
+  color: var(--extremely-light);
+  font-weight: 900;
+  cursor: pointer;
+}
+.photo {
+  width: 100%;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.photo img {
+  overflow: hidden;
+  width: 60%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+@media (max-width: 568px) {
+  .header {
+    height: 60px;
+    width: 100%;
+    background-color: var(--dark-blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 0;
+    display: flex;
+  }
+  .logoBox {
+    width: 60px;
+
+  }
+  .other {
+    width: calc(100% - 80px);
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+  }
+  .photo {
+    width: auto;
+    height: 100%;
+    padding: 0 25px;
+  }
+  .photo img {
+    overflow: hidden;
+    width: auto;
+    height: 60%;
+  }
+}
