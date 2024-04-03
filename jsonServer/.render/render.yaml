@@ -1,0 +1,6 @@
+# .render/render.yaml
+services:
+  - name: json-server
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
