@@ -19,7 +19,6 @@ function App() {
   useEffect(() => {
     dispatch(getBills());
   }, [dispatch]);
-
   return (
     <div
       className={style.page}
@@ -32,12 +31,12 @@ function App() {
         <div className={style.invoicesContainer}>
           <Filter InvoiceCount={ids.length} setShowForm={setShowForm} />
           <div className={style.invoices}>
-            {ids.map((id) => {
+            {ids.map((id, index) => {
               return (
                 <BillSummary
                   bill={bills[id]}
                   setInvoice={setInvoice}
-                  key={id}
+                  key={index}
                 />
               );
             })}

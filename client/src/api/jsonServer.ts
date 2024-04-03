@@ -8,7 +8,7 @@ export const jsonServer = axios.create({
 export const getAllBills = async (): Promise<Bill[]> | never => {
   try {
     const res = await jsonServer.get("/");
-    return res.data;
+    return res.data.bills;
   } catch (error) {
     console.error(error);
     throw error;
@@ -29,7 +29,6 @@ export const updateBill = async (
   bill: Bill
 ): Promise<void> | never => {
   try {
-    console.log({ bill });
     await jsonServer.put(`/${id}`, bill);
   } catch (error) {
     console.error(error);

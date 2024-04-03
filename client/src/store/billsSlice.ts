@@ -56,4 +56,4 @@ export const { addBill, upsertBill, removeBill } = billsSlice.actions;
 
 export const selectBills = (state: RootState) => state.bills;
 
-export default billsSlice.reducer;
+export default billsSlice?.reducer;

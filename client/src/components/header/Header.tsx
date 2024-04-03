@@ -14,7 +14,7 @@ const Header = () => {
       <div className={style.other}>
         <div className={style.modeIcon} onClick={() => dispatch(switchMode())}>
           <span className="material-symbols-rounded">
-            {mode.name == "dark" ? "wb_sunny" : "dark_mode"}
+            {mode?.name == "dark" ? "wb_sunny" : "dark_mode"}
           </span>
         </div>
         <div className={style.photo}>

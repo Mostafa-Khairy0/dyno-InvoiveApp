@@ -17,7 +17,7 @@ const Filter = ({
         color: mode.color.fontColor,
       }}
     >
-      <div className={style.name}>
+      <div className={style?.name}>
         <div className={style.title}>Invoice</div>
         <div className={style.total}>
           <span className={style.disable}>there are </span>

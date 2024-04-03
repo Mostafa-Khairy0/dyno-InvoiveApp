@@ -122,7 +122,7 @@ const BillDetails = ({
           </div>
           <div className={style.box}>
             <div className={style.light}>Bill To</div>
-            <div className={style.bold}>{bill.to.name}</div>
+            <div className={style.bold}>{bill.to?.name}</div>
             <div className={style.light}>{bill.to.address.street}</div>
             <div className={style.light}>{bill.to.address.city}</div>
             <div className={style.light}>{bill.to.address.postCode}</div>
@@ -145,7 +145,7 @@ const BillDetails = ({
           <tbody>
             {bill.items.map((item, index) => (
               <tr key={index}>
-                <td>{item.name}</td>
+                <td>{item?.name}</td>
                 <td>{item.quantity}</td>
                 <td>${item.price}</td>
                 <td>${item.price * item.quantity}</td>
@@ -157,7 +157,7 @@ const BillDetails = ({
               <td colSpan={3}>Invoice Cost</td>
               <td colSpan={1}>
                 $
-                {bill.items.reduce(
+                {bill.items?.reduce(
                   (prev, curr) => prev + curr.price * curr.quantity,
                   0
                 )}

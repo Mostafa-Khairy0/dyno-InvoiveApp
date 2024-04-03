@@ -43,14 +43,14 @@ const BillSummary = ({
         </div>
         <div className={`${style.item} ${style.price}`}>
           {`$`}
-          {bill.items.reduce(
+          {bill.items?.reduce(
             (accumulator, { price, quantity }) =>
               accumulator + price * quantity,
             0
           )}
         </div>
       </div>
-      <div className={`${style.item} ${style.name}`}>{bill.to.name}</div>
+      <div className={`${style.item} ${style?.name}`}>{bill.to?.name}</div>
       <div
         className={`${style.item} ${style.status}`}
         style={{

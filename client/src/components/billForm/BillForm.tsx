@@ -58,7 +58,6 @@ const BillForm = ({
         }}
         onSubmit={(event) => {
           event.preventDefault();
-          console.log({ newBill });
           if (id === -1) dispatch(addBill(newBill));
           else dispatch(upsertBill(newBill));
           setShowForm({ show: false, id: -1 });

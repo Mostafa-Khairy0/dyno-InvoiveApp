@@ -28,7 +28,7 @@ export const modeSlice = createSlice({
   initialState,
   reducers: {
     switchMode: (state) => {
-      if (state.value.name == "light") state.value = darkMode;
+      if (state.value?.name == "light") state.value = darkMode;
       else state.value = lightMode;
     },
     setMode: (state, { payload: name }: PayloadAction<ModeName>) => {
@@ -42,4 +42,4 @@ export const { switchMode, setMode } = modeSlice.actions;
 
 export const selectMode = (state: RootState) => state.mode.value;
 
-export default modeSlice.reducer;
+export default modeSlice?.reducer;
