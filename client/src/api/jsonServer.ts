@@ -2,7 +2,7 @@ import axios from "axios";
 import type { Bill } from "../types/bills";
 
 export const jsonServer = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://dyno-invoiveapp.onrender.com",
 });
 
 export const getAllBills = async (): Promise<Bill[]> | never => {
@@ -29,7 +29,7 @@ export const updateBill = async (
   bill: Bill
 ): Promise<void> | never => {
   try {
-    console.log({bill})
+    console.log({ bill });
     await jsonServer.put(`bills/${id}`, bill);
   } catch (error) {
     console.error(error);
